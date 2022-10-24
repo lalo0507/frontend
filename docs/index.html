@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hola. Soy Lalo, bienvenido :)</title>
+    <link rel="stylesheet" href="assets/style/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <script type="text/javascript" src="assets/js/app.js"></script>
+</head>
+<body>
+    <!╌ Menu de navegación ╌>
+    <nav class="menu">
+        <span><a href="#home">home</a></span>
+        <span><a href="#abme">about me</a></span>
+        <span><a href="#contactme">contact</a></span>
+    </nav>
+    <!╌ Inicia título ╌>
+    <article class="contenedor" id="home">
+        <section>
+            <br><br>
+            <p>
+            <h1>Hola, soy Lalo.<br>Bienvenido y gracias por visitar mi sitio.</h1>
+            </p>
+    <!--  <p class="prinny"><img src="assets/images/prinny.gif"><img src="assets/images/teemo.gif"><img src="assets/images/tc.gif"></p> -->
+            
+        </section>
+    </article>
+
+    <!╌ Inicia about me ╌>
+
+    <article class="aboutme" id="abme">
+        <section class="contenedor">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img src="assets/images/yop1.png" alt="">
+                </div>
+                <div class="aboutcol2">
+                    <h1 class="subtitulo">Acerca de mi</h1>
+                    <p class="texto">Hola. Me llamo Eduardo y todos me dicen Lalo. Soy egresado de las Licenciaturas en Psicología y Administración de la UNAM y tengo un maestría en Psicología Organizacional. Tengo amplia experiencia laboral en las áreas de Recursos Humanos, Capacitación y Administración. Actualmente estoy buscando ampliar mis oportunidades estudiando programación. Este es mi primer proyecto de Frontend, como parte del Bootcamp de Frontend de CódigoFacilito, espero poder enriquecerlo en el futuro.</p>
+                    
+                    <div class="titulostab">
+                        <p  class="tabl active-link" onclick="opentab('exp')">Experiencia</p>
+                        <p  class="tabl" onclick="opentab('edu')">Educación</p>
+                        <p  class="tabl" onclick="opentab('skl')">Skills</p>
+                    </div>
+                    <div class="tcontent t-act" id="exp">
+                        <ul>
+                            <li><span>LMS Manager</span><br>Online Training Manager</li>
+                            <li><span>Customer Support Management</span><br>Tier 1 Customer Support</li>
+                        </ul>
+                    </div>
+                    <div class="tcontent" id="edu">
+                        <ul>
+                            <li><span>UNAM</span><br>Especialidad en Dirección de Recursos Humanos</li>
+                            <li><span>UNITEC</span><br>Maestría en Psicología Organizacional</li>
+                        </ul>
+                    </div>
+                    <div class="tcontent" id="skl">
+                        <ul>
+                            <li><span>Desarrollo</span><br>Programación básica<br>Frontend</li>
+                            <li><span>Idiomas</span><br>Inglés avanzado</li>
+                            <li><span>IT</span><br>LMS/MS Office/Linux</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </article>
+
+    <!╌ Inicia projects ╌>
+
+    <article class="proyectos" id="projects">
+        <section class="contenedor">
+            <h1 class="subtitulo">Mis Proyectos</h1>
+            <div class="lista-p">
+                <div>
+                    <h2>Videojuego en Pygame</h2>
+                    <p>Proyecto final del Bootcamp de Introducción a la Programación de Código Facilito. Videojuego creado en python usando la librería pygame</p>
+                    <a href="https://github.com/lalo0507/CFB">Más...</a>
+                </div>
+                <div>
+                    <h2>Webapp Sudoku (Work in progress)</h2>
+                    <p>Proyecto final del Bootcamp Frontend de Código Facilito. Webapp que utiliza una API para generar una matriz de Sudoku y la inserta en la página</p>
+                    <a href="#">Más...</a>
+                </div>
+            </div>
+
+        </section>
+    </article>
+
+    <!╌ Inicia contact ╌>
+
+    <article class="contact" id="contactme">
+        <section class="contenedor">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="subtitulo">Contáctame</h1>
+                    <p><a href="mailto:ar.lalo@outlook.com">ar.lalo@outlook.com</a></p>
+                    <div class="socials">
+                        <a href="https://www.facebook.com"><i class="fa fa-facebook fa-1.5x"></i></a>
+                        <a href="https://www.twitter.com"><i class="fa fa-twitter-square fa-1.5x"></i></a>
+                        <a href="https://github.com/lalo0507"><i class="fa fa-github fa-1.5x"></i></a>
+                    </div>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Tú Nombre" required>
+                        <input type="email" name="email" placeholder="Tu correo" required>
+                        <textarea name="Message" rows="6" placeholder="Tu mensaje"></textarea>
+                        <button type="submit" class="btn">Enviar</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+
+        </section>
+
+    </article>
+
+<script>
+    const scriptURL ='https://script.google.com/macros/s/AKfycbylQY8MjxjGY_ZZjs5HI2qVX2lDk1mJgQAOoC5_8oqkyknJeToh-haUs8Ssy5s4OC5T-g/exec'
+const form = document.forms['submit-to-google-sheet']
+const msg = document.getElementById("msg")
+
+
+form.addEventListener('submit', e => {
+
+e.preventDefault()
+fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+    .then(response => {
+        msg.innerHTML = "¡Gracias por tu mensaje!"
+        setTimeout(function(){
+            msg.innerHTML = ""
+        }, 3000)
+        form.reset()
+    })
+    .catch(error => console.error('Error!', error.message))
+})
+</script>
+
+</body>
+</html>
